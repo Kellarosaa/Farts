@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Centered Search Bar Proxy</title>
+    <title>Search Bar Proxy</title>
     <style>
         .container {
             display: flex;
@@ -13,34 +13,39 @@
         .search-bar {
             display: flex;
             align-items: center;
-            padding: 10px;
+            justify-content: center;
+            width: 400px;
+            height: 40px;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 20px;
         }
         
         .search-bar input[type="text"] {
-            margin-left: 10px;
-            padding: 5px;
+            width: 80%;
+            height: 100%;
             border: none;
             outline: none;
+            padding: 0 10px;
+            font-size: 16px;
         }
         
         .search-bar button {
-            margin-left: 10px;
-            padding: 5px 10px;
+            width: 20%;
+            height: 100%;
+            border: none;
+            outline: none;
             background-color: #007bff;
             color: #fff;
-            border: none;
-            border-radius: 5px;
+            font-size: 16px;
             cursor: pointer;
+            border-radius: 0 20px 20px 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="search-bar">
-            <span>Search:</span>
-            <input type="text" placeholder="Enter your search query">
+            <input type="text" placeholder="Search...">
             <button type="submit">Go</button>
         </div>
     </div>
