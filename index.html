@@ -21,29 +21,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>US Central Time</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: top;
-            align-items: top;
-            height: 100vh;
-            font-size: 24px;
-        }
-    </style>
-    <script>
-        function displayTime() {
-            var currentTime = new Date();
-            var options = { timeZone: 'America/Chicago' };
-            var centralTime = currentTime.toLocaleTimeString('en-US', options);
-            document.getElementById('central-time').textContent = centralTime;
-        }
-
-        setInterval(displayTime, 1000);
-    </script>
+  <title>Chicago Clock</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    #clock {
+      font-size: 48px;
+      margin-top: 100px;
+    }
+  </style>
+  <script>
+    function updateClock() {
+      var currentTime = new Date();
+      var hours = currentTime.getHours();
+      var minutes = currentTime.getMinutes();
+      var seconds = currentTime.getSeconds();
+      
+      hours = (hours < 10 ? "0" : "") + hours;
+      minutes = (minutes < 10 ? "0" : "") + minutes;
+      seconds = (seconds < 10 ? "0" : "") + seconds;
+      
+      var timeString = hours + ":" + minutes + ":" + seconds;
+      document.getElementById("clock").innerHTML = timeString;
+    }
+    
+    setInterval(updateClock, 1000);
+  </script>
 </head>
 <body>
-    <h1>US Central Time:</h1>
-    <div id="central-time"></div>
+  <h1>Chicago Clock</h1>
+  <div id="clock"></div>
 </body>
 </html>
