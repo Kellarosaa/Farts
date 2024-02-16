@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Proxy Search</title>
+    <title>Proxy Website</title>
+    <script>
+        function search() {
+            var query = document.getElementById("searchInput").value;
+            var url = "https://www.google.com/search?q=" + encodeURIComponent(query);
+            window.location.href = url;
+        }
+    </script>
 </head>
 <body>
-    <form action="https://now.gg/apps/innersloth-llc/4047/among-us.html" method="GET">
-        <input type="text" name="query" placeholder="Search..." />
-        <input type="submit" value="Search" />
-    </form>
+    <h1>Proxy Website</h1>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button onclick="search()">Search</button>
 </body>
 </html>
