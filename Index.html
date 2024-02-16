@@ -5,8 +5,9 @@
     <style>
         body {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             margin: 0;
             padding: 0;
@@ -16,32 +17,39 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
+            margin-bottom: 20px;
         }
         
         .search-bar {
-            width: 300px;
+            width: 400px;
             height: 40px;
-            border: 1px solid #ccc;
-            border-radius: 20px;
             padding: 10px;
-            margin-bottom: 20px;
-            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        
+        .search-button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            background-color: #4285F4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
         
         .google-logo {
-            width: 150px;
-            height: 50px;
-            background-image: url('https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png');
-            background-size: cover;
+            width: 200px;
+            height: auto;
         }
     </style>
 </head>
 <body>
     <div class="search-container">
-        <div class="google-logo"></div>
         <input type="text" class="search-bar" placeholder="Search...">
-        <button>Search</button>
+        <button class="search-button">Search</button>
     </div>
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="google-logo">
 </body>
 </html>
