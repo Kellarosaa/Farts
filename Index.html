@@ -16,27 +16,34 @@
       border: 1px solid #ccc;
       border-radius: 20px;
       padding: 10px;
-      font-size: 16px;
+      display: flex;
+      align-items: center;
     }
     
-    .search-button {
-      margin-left: 10px;
-      padding: 8px 16px;
+    .search-bar input[type="text"] {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding-left: 10px;
+    }
+    
+    .search-bar button {
       background-color: #4CAF50;
       color: white;
       border: none;
+      outline: none;
+      padding: 5px 10px;
       border-radius: 20px;
-      font-size: 16px;
       cursor: pointer;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <form action="https://ktotokh.netlify.app/" method="get">
-      <input type="text" class="search-bar" name="q" placeholder="Search...">
-      <button type="submit" class="search-button">Go</button>
-    </form>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button type="submit">Go</button>
+    </div>
   </div>
 </body>
 </html>
