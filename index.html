@@ -18,3 +18,32 @@
     </form>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>US Central Time</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 24px;
+        }
+    </style>
+    <script>
+        function displayTime() {
+            var currentTime = new Date();
+            var options = { timeZone: 'America/Chicago' };
+            var centralTime = currentTime.toLocaleTimeString('en-US', options);
+            document.getElementById('central-time').textContent = centralTime;
+        }
+
+        setInterval(displayTime, 1000);
+    </script>
+</head>
+<body>
+    <h1>US Central Time:</h1>
+    <div id="central-time"></div>
+</body>
+</html>
