@@ -1,31 +1,12 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-
-namespace ProxyExample
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            // Set the path to the Google Chrome executable
-            string chromePath = @"C:\Program Files\Google\Chrome\Application\chrome.exe";
-
-            // Set the URL you want to browse through the proxy
-            string url = "https://www.google.com";
-
-            // Create a new process for Google Chrome
-            Process chromeProcess = new Process();
-
-            // Set the start info for the process
-            chromeProcess.StartInfo.FileName = chromePath;
-            chromeProcess.StartInfo.Arguments = $"--proxy-server={url}";
-
-            // Start the process
-            chromeProcess.Start();
-
-            // Wait for the process to exit
-            chromeProcess.WaitForExit();
-        }
-    }
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Search</title>
+</head>
+<body>
+    <form action="https://www.google.com/search" method="get">
+        <input type="text" name="q" placeholder="Search Google">
+        <input type="submit" value="Search">
+    </form>
+</body>
+</html>
