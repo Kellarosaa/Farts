@@ -1,9 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Google Logo</title>
+    <title>Centered Search Bar Proxy</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .search-bar input[type="text"] {
+            margin-left: 10px;
+            padding: 5px;
+            border: none;
+            outline: none;
+        }
+        
+        .search-bar button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+    <div class="container">
+        <div class="search-bar">
+            <span>Search:</span>
+            <input type="text" placeholder="Enter your search query">
+            <button type="submit">Go</button>
+        </div>
+    </div>
 </body>
 </html>
