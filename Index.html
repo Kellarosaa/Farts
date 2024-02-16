@@ -1,56 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Proxy Search</title>
+    <title>Search Engine</title>
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
         
         .search-bar {
-            display: flex;
-            align-items: center;
-            padding: 10px;
+            width: 300px;
+            height: 40px;
             border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #fff;
-        }
-        
-        .search-bar input[type="text"] {
-            flex: 1;
-            padding: 5px;
-            border: none;
-            outline: none;
-        }
-        
-        .search-bar button {
-            padding: 5px 10px;
-            margin-left: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #4285f4;
-            color: #fff;
-            cursor: pointer;
+            border-radius: 20px;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
         }
         
         .google-logo {
-            width: 100px;
-            height: 30px;
+            width: 150px;
+            height: 50px;
             background-image: url('https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png');
-            background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
         }
     </style>
 </head>
 <body>
-    <div class="search-bar">
-        <input type="text" placeholder="Search...">
-        <button type="submit">Go</button>
+    <div class="search-container">
+        <div class="google-logo"></div>
+        <input type="text" class="search-bar" placeholder="Search...">
+        <button>Search</button>
     </div>
-    <div class="google-logo"></div>
 </body>
 </html>
